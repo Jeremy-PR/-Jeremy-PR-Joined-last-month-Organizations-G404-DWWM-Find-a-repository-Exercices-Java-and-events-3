@@ -15,9 +15,6 @@ function handleClickChangeColor (event) {
 
     bloc.style.backgroundColor = colors[nextColorIndex];
 
+
  
-    // colors.forEach((color) => {
-    //     bloc.style.backgroundColor  = 
-        
-    // })
 }

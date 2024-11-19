@@ -1,0 +1,33 @@
+body {
+    background-color: white;
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+                    
+button {  
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#hiddenBox {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    display: none;
+    border: 1px solid #ccc;
+    position: absolute;
+    z-index: 10;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.grey-background {
+    background-color: #333;
+}
