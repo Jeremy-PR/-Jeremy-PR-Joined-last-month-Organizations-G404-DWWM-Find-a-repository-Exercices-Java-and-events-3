@@ -1,22 +1,24 @@
 
-const showButton = document.querySelector('#showButton');
-const body = document.querySelector('body'); 
-const hiddenBox = document.querySelector('#hiddenBox');
-
-showButton.addEventListener('click' , handleClick);
-body.addEventListener('click' , handleClickOut);
+const showModalBtn = document.querySelector("#showModal");
 
 
-function handleClick(){
+showModalBtn.addEventListener('click', handleClickShowModal);
 
-hiddenBox.classList.remove('hidden');
-body.classList.add('grey-background');
+function handleClickShowModal(){
+    const modal = document.querySelector('#modal');
+    modal.classList.remove("hidden");
+    document.body.classList.add("dark-bg");
 }
 
-function handleClickOut(event) {
-    
-    if (event.target !== hiddenBox && event.target !== showButton) {
-      hiddenBox.classList.add('hidden');
-      body.classList.remove('grey-background');
+document.addEventListener("click", handleClickHideModal);
+
+function handleClickHideModal(event){
+    event.stop
+
+    if(!modal.contains(event.target) && event.target !== showModalBtn){
+        const modal = document.querySelector('#modal');
+        modal.classList.add("hidden");
+        document.body.classList.remove("dark-bg");
     }
-  }
+    
+}
